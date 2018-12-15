@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/omakovsk/Documents/AbstractVM/Lexer.cpp
+Lexer.h
+/Users/omakovsk/Documents/AbstractVM/Lexer.h
+MyException.h
+/Users/omakovsk/Documents/AbstractVM/MyException.h
+iostream
+-
+fstream
+-
+sys/stat.h
+-
+
+/Users/omakovsk/Documents/AbstractVM/Lexer.h
+vector
+-
+map
+-
+
+/Users/omakovsk/Documents/AbstractVM/MyException.h
+exception
+-
+string
+-
+
