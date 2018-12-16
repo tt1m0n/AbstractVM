@@ -1,5 +1,6 @@
-#include "Lexer.h"
 #include <iostream>
+#include "Lexer.h"
+#include "Parser.h"
 
 int main(int argc, char **argv)
 {
@@ -7,6 +8,8 @@ int main(int argc, char **argv)
     {
         Lexer lexer(argc, argv);
         lexer.run();
+        Parser parser(lexer.getTokeLines());
+        parser.run();
     }
     catch (std::exception &ex)
     {

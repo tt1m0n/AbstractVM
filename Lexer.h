@@ -2,17 +2,23 @@
 #define LEXER_H
 
 #include <vector>
-#include <map>
+
+using TokenLine = std::vector<std::string>;
+using TokenLines = std::vector<TokenLine>;
 
 class Lexer
 {
 public:
-
-    //TODO canonical form
     Lexer(int argc, char **argv);
     ~Lexer();
 
+    //just for canonical form
+    Lexer();
+    Lexer(const Lexer &lexer);
+    const Lexer& operator=(const Lexer& lexer);
+
     void run();
+    const TokenLines &getTokeLines() const;
 
 private:
     void read();
@@ -23,7 +29,7 @@ private:
     int m_argc;
     char **m_argv;
     std::vector<std::string> m_lines;
-    std::vector<std::vector<std::string>> m_tokenLines;
+    TokenLines m_tokenLines;
 };
 
 #endif

@@ -4,12 +4,12 @@
 #include <fstream>
 #include <sys/stat.h>
 
-#define ONE_ARGUMENT 2
-#define NO_ARGUMENTS 1
-#define SPACE_SYMBOL ' '
-#define OPEN_BRACKET '('
-#define CLOSE_BRACKET ')'
-#define START_COMMENT ';'
+static const int g_kOneArgument = 2;
+static const int g_kNoArguments = 1;
+static const char g_kSpaceSymbol = ' ';
+static const char g_kOpenBracketSymbol = '(';
+static const char g_kCloseBracketSymbol = ')';
+static const char g_kStartCommentSymbol = ';';
 
 Lexer::Lexer(int argc, char **argv) : m_argc(argc), m_argv(argv)
 {
@@ -23,14 +23,19 @@ void Lexer::run()
     tokenize();
 }
 
+const TokenLines &Lexer::getTokeLines() const
+{
+    return m_tokenLines;
+}
+
 void Lexer::read()
 {
-    if (m_argc > ONE_ARGUMENT)
+    if (m_argc > g_kOneArgument)
     {
         throw MyException("Usage: ./asm | ./asm filename");
     }
 
-    if (m_argc == ONE_ARGUMENT)
+    if (m_argc == g_kOneArgument)
     {
         struct stat	st;
         lstat(m_argv[1], &st);
@@ -54,7 +59,7 @@ void Lexer::read()
         }
     }
 
-    if (m_argc == NO_ARGUMENTS)
+    if (m_argc == g_kNoArguments)
     {
         std::string line;
         while (std::getline(std::cin, line))
@@ -86,23 +91,23 @@ void Lexer::splitLine(const std::string &line)
     std::vector<std::string> tokenLine;
     std::string token;
 
-    for (const char& symbol : line)
+    for (int i = 0; i < line.length(); ++i)
     {
-        if (symbol == SPACE_SYMBOL && token.empty())
+        if (line[i] == g_kSpaceSymbol && token.empty())
         {
             continue;
         }
 
-        if (symbol == SPACE_SYMBOL)
+        if (line[i] == g_kSpaceSymbol)
         {
             tokenLine.emplace_back(token);
             token.clear();
             continue;
         }
 
-        if (symbol == OPEN_BRACKET ||
-            symbol == CLOSE_BRACKET ||
-            symbol == START_COMMENT)
+        if (line[i] == g_kOpenBracketSymbol ||
+            line[i] == g_kCloseBracketSymbol ||
+            line[i] == g_kStartCommentSymbol)
         {
             if (!token.empty())
             {
@@ -110,19 +115,20 @@ void Lexer::splitLine(const std::string &line)
                 token.clear();
             }
 
-            if (symbol == START_COMMENT)
+            if (line[i] == g_kStartCommentSymbol)
             {
-                token += symbol;
+                token = line.substr(i, line.length() - i);
+                break;
             }
             else
             {
-                tokenLine.emplace_back(std::string(sizeof(char), symbol));
+                tokenLine.emplace_back(std::string(sizeof(char), line[i]));
             }
 
             continue;
         }
 
-        token += symbol;
+        token += line[i];
     }
 
     if (!token.empty())

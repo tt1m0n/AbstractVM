@@ -12,6 +12,11 @@ CMakeFiles/AbstractVM.dir/Operand.cpp.o: ../IOperand.h
 CMakeFiles/AbstractVM.dir/Operand.cpp.o: ../Operand.cpp
 CMakeFiles/AbstractVM.dir/Operand.cpp.o: ../Operand.h
 
+CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../MyException.h
+CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../Parser.cpp
+CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../Parser.h
+
 CMakeFiles/AbstractVM.dir/main.cpp.o: ../Lexer.h
+CMakeFiles/AbstractVM.dir/main.cpp.o: ../Parser.h
 CMakeFiles/AbstractVM.dir/main.cpp.o: ../main.cpp
 

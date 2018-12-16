@@ -12,6 +12,11 @@ CMakeFiles/AbstractVM.dir/Operand.cpp.o
  /Users/omakovsk/Documents/AbstractVM/IOperand.h
  /Users/omakovsk/Documents/AbstractVM/Operand.cpp
  /Users/omakovsk/Documents/AbstractVM/Operand.h
+CMakeFiles/AbstractVM.dir/Parser.cpp.o
+ /Users/omakovsk/Documents/AbstractVM/MyException.h
+ /Users/omakovsk/Documents/AbstractVM/Parser.cpp
+ /Users/omakovsk/Documents/AbstractVM/Parser.h
 CMakeFiles/AbstractVM.dir/main.cpp.o
  /Users/omakovsk/Documents/AbstractVM/Lexer.h
+ /Users/omakovsk/Documents/AbstractVM/Parser.h
  /Users/omakovsk/Documents/AbstractVM/main.cpp

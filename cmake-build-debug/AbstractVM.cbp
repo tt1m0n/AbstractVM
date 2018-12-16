@@ -103,6 +103,12 @@
 		<Unit filename="/Users/omakovsk/Documents/AbstractVM/Operand.h">
 			<Option target="AbstractVM"/>
 		</Unit>
+		<Unit filename="/Users/omakovsk/Documents/AbstractVM/Parser.cpp">
+			<Option target="AbstractVM"/>
+		</Unit>
+		<Unit filename="/Users/omakovsk/Documents/AbstractVM/Parser.h">
+			<Option target="AbstractVM"/>
+		</Unit>
 		<Unit filename="/Users/omakovsk/Documents/AbstractVM/main.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
