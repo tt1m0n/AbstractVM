@@ -3,4 +3,11 @@
 
 #include "IOperand.h"
 
+template <typename T>
+class Operand : public IOperand
+{
+public:
+
+};
+
 #endif

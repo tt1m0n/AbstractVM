@@ -50,6 +50,12 @@ std::string MyException::makeErrorString(ErrorType type, int line, const std::st
         {
             error += g_kWrongTypeName + g_kSpaceSeparator + g_kDefisSeparator +
                      g_kSpaceSeparator + argument;
+
+            return  error;
+        }
+        default:
+        {
+            return std::string();
         }
     }
 }

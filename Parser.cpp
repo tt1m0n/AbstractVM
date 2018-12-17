@@ -59,6 +59,8 @@ void Parser::parse()
             }
             else if (!command.empty())
             {
+                m_isErrorPresent = true;
+
                 std::string error = MyException::makeErrorString(ErrorType::errorCommand,
                         line,
                         command);
@@ -108,7 +110,7 @@ void Parser::pushCommand(int line, const TokenLine &tokenLine)
     }
     else
     {
-
+        
     }
 }
 
@@ -271,6 +273,7 @@ void Parser::checkNameOfType(int line, const std::string &typeName)
     std::string error = MyException::makeErrorString(ErrorType::errorTypeName,
             line,
             typeName);
+
     throw MyException(error);
 }
 

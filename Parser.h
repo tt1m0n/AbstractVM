@@ -3,18 +3,12 @@
 
 #include <vector>
 #include <map>
+#include <list>
+
+#include "IOperand.h"
 
 using TokenLine = std::vector<std::string>;
 using TokenLines = std::vector<TokenLine>;
-
-enum eOperandType
-{
-    Int8 = 0,
-    Int16,
-    Int32,
-    Float,
-    Double
-};
 
 class Parser
 {
@@ -57,6 +51,9 @@ private:
     std::map<std::string, ProcessCommand> m_processCommands;
 
     std::map<std::string, eOperandType> m_operands;
+
+    // use list because need to iterate through on dum command
+    std::list<const IOperand*> m_stack;
 
     bool m_isErrorPresent;
     bool m_isNeedToCheck;
