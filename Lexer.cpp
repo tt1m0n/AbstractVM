@@ -10,8 +10,14 @@ static const char g_kSpaceSymbol = ' ';
 static const char g_kOpenBracketSymbol = '(';
 static const char g_kCloseBracketSymbol = ')';
 static const char g_kStartCommentSymbol = ';';
+static const std::string g_kEndInput = "exit";
+static const std::string g_kEndStandartInput = ";;";
+static const std::string g_kNoExitInput = "Error: no exit command from standart input";
 
-Lexer::Lexer(int argc, char **argv) : m_argc(argc), m_argv(argv)
+Lexer::Lexer(int argc, char **argv)
+    : m_argc(argc),
+    m_argv(argv),
+    m_isStandartInput(false)
 {
 }
 
@@ -28,6 +34,11 @@ const TokenLines &Lexer::getTokeLines() const
     return m_tokenLines;
 }
 
+bool Lexer::isStandartInput() const
+{
+    return m_isStandartInput;
+}
+
 void Lexer::read()
 {
     if (m_argc > g_kOneArgument)
@@ -37,6 +48,8 @@ void Lexer::read()
 
     if (m_argc == g_kOneArgument)
     {
+        m_isStandartInput = true;
+
         struct stat	st;
         lstat(m_argv[1], &st);
 
@@ -65,6 +78,10 @@ void Lexer::read()
         while (std::getline(std::cin, line))
         {
             m_lines.push_back(line);
+            if (line == g_kEndStandartInput)
+            {
+                break;
+            }
         }
     }
 }
@@ -74,15 +91,6 @@ void Lexer::tokenize()
     for (const std::string &line : m_lines)
     {
         splitLine(line);
-    }
-
-    for (auto vec : m_tokenLines)
-    {
-        for (auto str : vec)
-        {
-            std::cout << str << " | ";
-        }
-        std::cout << std::endl;
     }
 }
 

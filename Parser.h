@@ -6,6 +6,7 @@
 #include <list>
 
 #include "IOperand.h"
+#include "OperandFactory.h"
 
 using TokenLine = std::vector<std::string>;
 using TokenLines = std::vector<TokenLine>;
@@ -13,7 +14,7 @@ using TokenLines = std::vector<TokenLine>;
 class Parser
 {
 public:
-    Parser(const TokenLines& tokenLines);
+    Parser(const TokenLines& tokenLines, bool isStandartInput);
     ~Parser();
 
     //just for canonical form
@@ -51,12 +52,14 @@ private:
     std::map<std::string, ProcessCommand> m_processCommands;
 
     std::map<std::string, eOperandType> m_operands;
+    OperandFactory m_factory;
 
     // use list because need to iterate through on dum command
-    std::list<const IOperand*> m_stack;
+    std::list<std::unique_ptr<const IOperand>> m_stack;
 
     bool m_isErrorPresent;
     bool m_isNeedToCheck;
+    bool m_isStandartInput;
 };
 
 #endif

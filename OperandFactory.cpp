@@ -1,6 +1,8 @@
 #include "OperandFactory.h"
+#include "Operand.h"
 
 OperandFactory::OperandFactory()
+    : m_line(0)
 {
     initCreateCommands();
 }
@@ -22,27 +24,32 @@ IOperand const *OperandFactory::createOperand(eOperandType type,
     return (this->*m_createCommands.at(type))(value);
 }
 
+void OperandFactory::setLine(int line)
+{
+    m_line = line;
+}
+
 IOperand const* OperandFactory::createInt8(std::string const &value) const
 {
-    return (new Operand<char>(value, Int8, 0, this));
+    return (new Operand<char>(value, Int8, 0, *this, m_line));
 }
 
 IOperand const* OperandFactory::createInt16(std::string const &value) const
 {
-    return (new Operand<short int>(value, Int16, 0, this));
+    return (new Operand<short int>(value, Int16, 0, *this, m_line));
 }
 
 IOperand const* OperandFactory::createInt32(std::string const &value) const
 {
-    return (new Operand<int>(value, Int32, 0, this));
+    return (new Operand<int>(value, Int32, 0, *this, m_line));
 }
 
 IOperand const* OperandFactory::createFloat(std::string const &value) const
 {
-    return (new Operand<float>(value, Float, 7, this));
+    return (new Operand<float>(value, Float, 7, *this, m_line));
 }
 
 IOperand const* OperandFactory::createDouble( std::string const & value ) const
 {
-    return (new Operand<double>(value, Double, 14, this));
+    return (new Operand<double>(value, Double, 14, *this, m_line));
 }

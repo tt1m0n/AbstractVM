@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/developer/Desktop/abstractVM/Lexer.cpp" "/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles/AbstractVM.dir/Lexer.cpp.o"
   "/Users/developer/Desktop/abstractVM/MyException.cpp" "/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles/AbstractVM.dir/MyException.cpp.o"
-  "/Users/developer/Desktop/abstractVM/Operand.cpp" "/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles/AbstractVM.dir/Operand.cpp.o"
   "/Users/developer/Desktop/abstractVM/OperandFactory.cpp" "/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o"
   "/Users/developer/Desktop/abstractVM/Parser.cpp" "/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles/AbstractVM.dir/Parser.cpp.o"
   "/Users/developer/Desktop/abstractVM/main.cpp" "/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles/AbstractVM.dir/main.cpp.o"

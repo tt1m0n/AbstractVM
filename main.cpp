@@ -8,7 +8,7 @@ int main(int argc, char **argv)
     {
         Lexer lexer(argc, argv);
         lexer.run();
-        Parser parser(lexer.getTokeLines());
+        Parser parser(lexer.getTokeLines(), lexer.isStandartInput());
         parser.run();
     }
     catch (std::exception &ex)

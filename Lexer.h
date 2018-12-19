@@ -19,6 +19,7 @@ public:
 
     void run();
     const TokenLines &getTokeLines() const;
+    bool isStandartInput() const;
 
 private:
     void read();
@@ -28,6 +29,7 @@ private:
 private:
     int m_argc;
     char **m_argv;
+    bool m_isStandartInput;
     std::vector<std::string> m_lines;
     TokenLines m_tokenLines;
 };

@@ -8,7 +8,11 @@ enum ErrorType
 {
     errorCommand = 0,
     errorTokenNumber,
-    errorTypeName
+    errorTypeName,
+    errorPopCommand,
+    errorAssertEmpty,
+    errorAssertValue,
+    errorAssertType
 };
 
 class MyException : public std::exception
@@ -20,7 +24,7 @@ public:
 
     const char* what() const throw ();
 
-    static std::string makeErrorString(ErrorType type, int line, const std::string &argument = "");
+    static std::string makeErrorString(int line, const std::string &argument);
 
     // just for Canonical form
     MyException();

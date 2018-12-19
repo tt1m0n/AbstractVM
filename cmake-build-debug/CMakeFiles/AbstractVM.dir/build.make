@@ -70,22 +70,9 @@ CMakeFiles/AbstractVM.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AbstractVM.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/developer/Desktop/abstractVM/main.cpp -o CMakeFiles/AbstractVM.dir/main.cpp.s
 
-CMakeFiles/AbstractVM.dir/Operand.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
-CMakeFiles/AbstractVM.dir/Operand.cpp.o: ../Operand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AbstractVM.dir/Operand.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/Operand.cpp.o -c /Users/developer/Desktop/abstractVM/Operand.cpp
-
-CMakeFiles/AbstractVM.dir/Operand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AbstractVM.dir/Operand.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/developer/Desktop/abstractVM/Operand.cpp > CMakeFiles/AbstractVM.dir/Operand.cpp.i
-
-CMakeFiles/AbstractVM.dir/Operand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AbstractVM.dir/Operand.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/developer/Desktop/abstractVM/Operand.cpp -o CMakeFiles/AbstractVM.dir/Operand.cpp.s
-
 CMakeFiles/AbstractVM.dir/Lexer.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
 CMakeFiles/AbstractVM.dir/Lexer.cpp.o: ../Lexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AbstractVM.dir/Lexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AbstractVM.dir/Lexer.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/Lexer.cpp.o -c /Users/developer/Desktop/abstractVM/Lexer.cpp
 
 CMakeFiles/AbstractVM.dir/Lexer.cpp.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/AbstractVM.dir/Lexer.cpp.s: cmake_force
 
 CMakeFiles/AbstractVM.dir/MyException.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
 CMakeFiles/AbstractVM.dir/MyException.cpp.o: ../MyException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AbstractVM.dir/MyException.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AbstractVM.dir/MyException.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/MyException.cpp.o -c /Users/developer/Desktop/abstractVM/MyException.cpp
 
 CMakeFiles/AbstractVM.dir/MyException.cpp.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/AbstractVM.dir/MyException.cpp.s: cmake_force
 
 CMakeFiles/AbstractVM.dir/Parser.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
 CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AbstractVM.dir/Parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AbstractVM.dir/Parser.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/Parser.cpp.o -c /Users/developer/Desktop/abstractVM/Parser.cpp
 
 CMakeFiles/AbstractVM.dir/Parser.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/AbstractVM.dir/Parser.cpp.s: cmake_force
 
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../OperandFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o -c /Users/developer/Desktop/abstractVM/OperandFactory.cpp
 
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.i: cmake_force
@@ -138,7 +125,6 @@ CMakeFiles/AbstractVM.dir/OperandFactory.cpp.s: cmake_force
 # Object files for target AbstractVM
 AbstractVM_OBJECTS = \
 "CMakeFiles/AbstractVM.dir/main.cpp.o" \
-"CMakeFiles/AbstractVM.dir/Operand.cpp.o" \
 "CMakeFiles/AbstractVM.dir/Lexer.cpp.o" \
 "CMakeFiles/AbstractVM.dir/MyException.cpp.o" \
 "CMakeFiles/AbstractVM.dir/Parser.cpp.o" \
@@ -148,14 +134,13 @@ AbstractVM_OBJECTS = \
 AbstractVM_EXTERNAL_OBJECTS =
 
 AbstractVM: CMakeFiles/AbstractVM.dir/main.cpp.o
-AbstractVM: CMakeFiles/AbstractVM.dir/Operand.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/Lexer.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/MyException.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/Parser.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/build.make
 AbstractVM: CMakeFiles/AbstractVM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable AbstractVM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable AbstractVM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AbstractVM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

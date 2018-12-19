@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/AbstractVM.dir/main.cpp.o"
-  "CMakeFiles/AbstractVM.dir/Operand.cpp.o"
   "CMakeFiles/AbstractVM.dir/Lexer.cpp.o"
   "CMakeFiles/AbstractVM.dir/MyException.cpp.o"
   "CMakeFiles/AbstractVM.dir/Parser.cpp.o"

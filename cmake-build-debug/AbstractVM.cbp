@@ -97,9 +97,6 @@
 		<Unit filename="/Users/developer/Desktop/abstractVM/MyException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/Operand.cpp">
-			<Option target="AbstractVM"/>
-		</Unit>
 		<Unit filename="/Users/developer/Desktop/abstractVM/Operand.h">
 			<Option target="AbstractVM"/>
 		</Unit>

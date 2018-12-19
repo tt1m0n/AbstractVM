@@ -177,33 +177,6 @@ MyException.cpp.s:
 	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/MyException.cpp.s
 .PHONY : MyException.cpp.s
 
-Operand.o: Operand.cpp.o
-
-.PHONY : Operand.o
-
-# target to build an object file
-Operand.cpp.o:
-	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/Operand.cpp.o
-.PHONY : Operand.cpp.o
-
-Operand.i: Operand.cpp.i
-
-.PHONY : Operand.i
-
-# target to preprocess a source file
-Operand.cpp.i:
-	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/Operand.cpp.i
-.PHONY : Operand.cpp.i
-
-Operand.s: Operand.cpp.s
-
-.PHONY : Operand.s
-
-# target to generate assembly for a file
-Operand.cpp.s:
-	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/Operand.cpp.s
-.PHONY : Operand.cpp.s
-
 OperandFactory.o: OperandFactory.cpp.o
 
 .PHONY : OperandFactory.o
@@ -300,9 +273,6 @@ help:
 	@echo "... MyException.o"
 	@echo "... MyException.i"
 	@echo "... MyException.s"
-	@echo "... Operand.o"
-	@echo "... Operand.i"
-	@echo "... Operand.s"
 	@echo "... OperandFactory.o"
 	@echo "... OperandFactory.i"
 	@echo "... OperandFactory.s"
