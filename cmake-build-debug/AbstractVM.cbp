@@ -91,6 +91,12 @@
 		<Unit filename="/Users/developer/Desktop/abstractVM/Lexer.h">
 			<Option target="AbstractVM"/>
 		</Unit>
+		<Unit filename="/Users/developer/Desktop/abstractVM/LexerException.cpp">
+			<Option target="AbstractVM"/>
+		</Unit>
+		<Unit filename="/Users/developer/Desktop/abstractVM/LexerException.h">
+			<Option target="AbstractVM"/>
+		</Unit>
 		<Unit filename="/Users/developer/Desktop/abstractVM/MyException.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
@@ -98,6 +104,12 @@
 			<Option target="AbstractVM"/>
 		</Unit>
 		<Unit filename="/Users/developer/Desktop/abstractVM/Operand.h">
+			<Option target="AbstractVM"/>
+		</Unit>
+		<Unit filename="/Users/developer/Desktop/abstractVM/OperandException.cpp">
+			<Option target="AbstractVM"/>
+		</Unit>
+		<Unit filename="/Users/developer/Desktop/abstractVM/OperandException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
 		<Unit filename="/Users/developer/Desktop/abstractVM/OperandFactory.cpp">
@@ -110,6 +122,12 @@
 			<Option target="AbstractVM"/>
 		</Unit>
 		<Unit filename="/Users/developer/Desktop/abstractVM/Parser.h">
+			<Option target="AbstractVM"/>
+		</Unit>
+		<Unit filename="/Users/developer/Desktop/abstractVM/ParserException.cpp">
+			<Option target="AbstractVM"/>
+		</Unit>
+		<Unit filename="/Users/developer/Desktop/abstractVM/ParserException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
 		<Unit filename="/Users/developer/Desktop/abstractVM/main.cpp">

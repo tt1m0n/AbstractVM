@@ -2,6 +2,7 @@
 #include <functional>
 #include "Parser.h"
 #include "MyException.h"
+#include "ParserException.h"
 
 static const size_t g_kTokenSizeSimpleCommand = 1;
 static const size_t g_kTokenSizeValueCommand = 5;
@@ -91,7 +92,7 @@ void Parser::parse()
                         g_kSpaceSeparator + command;
                 std::string error = MyException::makeErrorString(line, errorArgument);
 
-                throw MyException(error);
+                throw ParserException(error);
             }
         }
         catch (std::exception &ex)
@@ -100,7 +101,7 @@ void Parser::parse()
         }
     }
 
-    throw MyException("No exit command");
+    throw ParserException("No exit command");
 }
 
 void Parser::initProcessCommands()
@@ -159,7 +160,7 @@ void Parser::popCommand(int line, const TokenLine &tokenLine)
         if (m_stack.empty())
         {
             std::string error = MyException::makeErrorString(line, g_kWrongPopCommand);
-            throw MyException(error);
+            throw ParserException(error);
         }
 
         m_stack.pop_front();
@@ -193,20 +194,20 @@ void Parser::assertCommand(int line, const TokenLine &tokenLine)
         if (m_stack.empty())
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAssertEmpty);
-            throw MyException(error);
+            ParserException MyException(error);
         }
 
         eOperandType assertType = m_operands.at(tokenLine[g_kTypeNamePosition]);
         if (assertType != m_stack.front()->getType())
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAssertType);
-            throw MyException(error);
+            ParserException MyException(error);
         }
 
         if (tokenLine[g_kValuePosition] != m_stack.front()->toString())
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAssertValue);
-            throw MyException(error);
+            ParserException MyException(error);
         }
     }
 }
@@ -222,7 +223,7 @@ void Parser::addCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAdd);
-            throw MyException(error);
+            ParserException MyException(error);
         }
 
         // extract first value
@@ -253,7 +254,7 @@ void Parser::subCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongSub);
-            throw MyException(error);
+            ParserException MyException(error);
         }
 
         // extract first value
@@ -284,7 +285,7 @@ void Parser::mulCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongMul);
-            throw MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value
@@ -315,7 +316,7 @@ void Parser::divCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongDiv);
-            throw MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value
@@ -345,7 +346,7 @@ void Parser::modCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongMod);
-            throw MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value
@@ -376,13 +377,13 @@ void Parser::printCommand(int line, const TokenLine &tokenLine)
         if (m_stack.empty())
         {
             std::string error = MyException::makeErrorString(line, g_kEmptyPrint);
-            throw MyException(error);
+            throw ParserException(error);
         }
 
         if (m_stack.front()->getType() != eOperandType::Int8)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongPrint);
-            throw MyException(error);
+            throw ParserException(error);
         }
 
         std::cout << static_cast<char>(std::stoi(m_stack.front()->toString())) << std::endl;
@@ -394,10 +395,6 @@ void Parser::exitCommand(int line, const TokenLine &tokenLine)
     if (m_isNeedToCheck)
     {
         checkNumberOfTokens(line, tokenLine, false);
-    }
-    else
-    {
-
     }
 }
 
@@ -423,7 +420,7 @@ void Parser::checkNumberOfTokens(int line,
     m_isErrorPresent = true;
 
     std::string error = MyException::makeErrorString(line, g_kWrongNumberOfTokes);
-    throw MyException(error);
+    throw ParserException(error);
 
 }
 
@@ -440,6 +437,34 @@ void Parser::checkNameOfType(int line, const std::string &typeName)
             g_kSpaceSeparator + typeName;
     std::string error = MyException::makeErrorString(line, errorArgument);
 
-    throw MyException(error);
+    throw ParserException(error);
+}
+
+//just for canonical form
+Parser::Parser()
+    :m_isErrorPresent(false),
+    m_isNeedToCheck(false),
+    m_isStandartInput(false)
+{
+}
+
+const Parser& Parser::operator=(const Parser& lexer)
+{
+    if (this != &lexer)
+    {
+        this->m_tokenLines = lexer.m_tokenLines;
+        this->m_processCommands = lexer.m_processCommands;
+        this->m_operands = lexer.m_operands;
+        this->m_isErrorPresent = lexer.m_isErrorPresent;
+        this->m_isNeedToCheck = lexer.m_isNeedToCheck;
+        this->m_isStandartInput = lexer.m_isStandartInput;
+    }
+
+    return *this;
+}
+
+Parser::Parser(const Parser &lexer)
+{
+    *this = lexer;
 }
 

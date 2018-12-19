@@ -10,6 +10,7 @@
 #include <math.h>
 
 #include "MyException.h"
+#include "OperandException.h"
 #include "IOperand.h"
 #include "OperandFactory.h"
 
@@ -21,11 +22,6 @@ template <typename T>
 class Operand : public IOperand
 {
 public:
-    // just for canonical form
-    Operand();
-    Operand(const Operand&);
-    const Operand& operator=(const Operand&);
-    
     Operand(const std::string &value,
             eOperandType type,
             int precision,
@@ -44,7 +40,7 @@ public:
                 if (isErrorLimits<long long>(workValue, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
                 m_value = static_cast<T>(workValue);
                 std::stringstream ss(std::stringstream::out);
@@ -57,7 +53,7 @@ public:
                 if (isErrorLimits<long double>(workValue, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
                 m_value = static_cast<T>(workValue);
                 std::stringstream ss(std::stringstream::out);
@@ -148,7 +144,7 @@ public:
                 if (isErrorLimits<long long>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << result;
@@ -159,7 +155,7 @@ public:
                 if (isErrorLimits<long double>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << std::setprecision(precision) << result;
@@ -190,7 +186,7 @@ public:
                 if (isErrorLimits<long long>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << result;
@@ -232,7 +228,7 @@ public:
                 if (isErrorLimits<long long>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << result;
@@ -243,7 +239,7 @@ public:
                 if (isErrorLimits<long double>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << std::setprecision(precision) << result;
@@ -270,7 +266,7 @@ public:
             if (std::stold(rhs.toString()) == 0)
             {
                 std::string error = MyException::makeErrorString(m_line, g_kDivisionByZero);
-                throw MyException(error);
+                throw OperandException(error);
             }
 
             std::stringstream stream(std::stringstream::out);
@@ -280,7 +276,7 @@ public:
                 if (isErrorLimits<long long>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << result;
@@ -291,7 +287,7 @@ public:
                 if (isErrorLimits<long double>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
 
                 stream << std::setprecision(precision) << result;
@@ -318,7 +314,7 @@ public:
             if (std::stold(rhs.toString()) == 0)
             {
                 std::string error = MyException::makeErrorString(m_line, g_kModuloByZero);
-                throw MyException(error);
+                throw OperandException(error);
             }
 
             std::stringstream stream(std::stringstream::out);
@@ -328,7 +324,7 @@ public:
                 if (isErrorLimits<long long>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
                 stream << result;
             }
@@ -338,7 +334,7 @@ public:
                 if (isErrorLimits<long double>(result, type))
                 {
                     std::string error = MyException::makeErrorString(m_line, g_kErrorLimit);
-                    throw MyException(error);
+                    throw OperandException(error);
                 }
                 stream << std::setprecision(precision) << result;
             }
@@ -352,6 +348,35 @@ public:
         }
 
         return 0;
+    }
+
+    // just for canonical form
+    Operand()
+        : m_value(0),
+        m_type(Int8),
+        m_precision(0),
+        m_line(0)
+    {
+    }
+
+    const Operand& operator=(const Operand& operand)
+    {
+        if (this != &operand)
+        {
+            this->m_factory = operand.m_factory;
+            this->m_value = operand.m_value;
+            this->m_type = operand.m_type;
+            this->m_precision = operand.m_precision;
+            this->m_str = operand.m_str;
+            this->m_line = operand.m_line;
+        }
+
+        return *this;
+    }
+
+    Operand(const Operand& operand)
+    {
+        *this = operand;
     }
 
 private:

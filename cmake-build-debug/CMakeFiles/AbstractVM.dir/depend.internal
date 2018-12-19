@@ -4,14 +4,24 @@
 CMakeFiles/AbstractVM.dir/Lexer.cpp.o
  /Users/developer/Desktop/abstractVM/Lexer.cpp
  /Users/developer/Desktop/abstractVM/Lexer.h
+ /Users/developer/Desktop/abstractVM/LexerException.h
+ /Users/developer/Desktop/abstractVM/MyException.h
+CMakeFiles/AbstractVM.dir/LexerException.cpp.o
+ /Users/developer/Desktop/abstractVM/LexerException.cpp
+ /Users/developer/Desktop/abstractVM/LexerException.h
  /Users/developer/Desktop/abstractVM/MyException.h
 CMakeFiles/AbstractVM.dir/MyException.cpp.o
  /Users/developer/Desktop/abstractVM/MyException.cpp
  /Users/developer/Desktop/abstractVM/MyException.h
+CMakeFiles/AbstractVM.dir/OperandException.cpp.o
+ /Users/developer/Desktop/abstractVM/MyException.h
+ /Users/developer/Desktop/abstractVM/OperandException.cpp
+ /Users/developer/Desktop/abstractVM/OperandException.h
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o
  /Users/developer/Desktop/abstractVM/IOperand.h
  /Users/developer/Desktop/abstractVM/MyException.h
  /Users/developer/Desktop/abstractVM/Operand.h
+ /Users/developer/Desktop/abstractVM/OperandException.h
  /Users/developer/Desktop/abstractVM/OperandFactory.cpp
  /Users/developer/Desktop/abstractVM/OperandFactory.h
 CMakeFiles/AbstractVM.dir/Parser.cpp.o
@@ -20,6 +30,11 @@ CMakeFiles/AbstractVM.dir/Parser.cpp.o
  /Users/developer/Desktop/abstractVM/OperandFactory.h
  /Users/developer/Desktop/abstractVM/Parser.cpp
  /Users/developer/Desktop/abstractVM/Parser.h
+ /Users/developer/Desktop/abstractVM/ParserException.h
+CMakeFiles/AbstractVM.dir/ParserException.cpp.o
+ /Users/developer/Desktop/abstractVM/MyException.h
+ /Users/developer/Desktop/abstractVM/ParserException.cpp
+ /Users/developer/Desktop/abstractVM/ParserException.h
 CMakeFiles/AbstractVM.dir/main.cpp.o
  /Users/developer/Desktop/abstractVM/IOperand.h
  /Users/developer/Desktop/abstractVM/Lexer.h

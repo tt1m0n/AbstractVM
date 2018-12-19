@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/AbstractVM.dir/MyException.cpp.o"
   "CMakeFiles/AbstractVM.dir/Parser.cpp.o"
   "CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o"
+  "CMakeFiles/AbstractVM.dir/LexerException.cpp.o"
+  "CMakeFiles/AbstractVM.dir/ParserException.cpp.o"
+  "CMakeFiles/AbstractVM.dir/OperandException.cpp.o"
   "AbstractVM.pdb"
   "AbstractVM"
 )

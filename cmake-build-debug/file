@@ -1,3 +1,5 @@
-push float(42.42)
-assert double(42.42)
+push int8(32)
+push double (32.2)
+dump
+push float(33.3333)
 exit

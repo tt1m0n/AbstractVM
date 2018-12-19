@@ -122,13 +122,55 @@ CMakeFiles/AbstractVM.dir/OperandFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AbstractVM.dir/OperandFactory.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/developer/Desktop/abstractVM/OperandFactory.cpp -o CMakeFiles/AbstractVM.dir/OperandFactory.cpp.s
 
+CMakeFiles/AbstractVM.dir/LexerException.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
+CMakeFiles/AbstractVM.dir/LexerException.cpp.o: ../LexerException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AbstractVM.dir/LexerException.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/LexerException.cpp.o -c /Users/developer/Desktop/abstractVM/LexerException.cpp
+
+CMakeFiles/AbstractVM.dir/LexerException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AbstractVM.dir/LexerException.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/developer/Desktop/abstractVM/LexerException.cpp > CMakeFiles/AbstractVM.dir/LexerException.cpp.i
+
+CMakeFiles/AbstractVM.dir/LexerException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AbstractVM.dir/LexerException.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/developer/Desktop/abstractVM/LexerException.cpp -o CMakeFiles/AbstractVM.dir/LexerException.cpp.s
+
+CMakeFiles/AbstractVM.dir/ParserException.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
+CMakeFiles/AbstractVM.dir/ParserException.cpp.o: ../ParserException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AbstractVM.dir/ParserException.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/ParserException.cpp.o -c /Users/developer/Desktop/abstractVM/ParserException.cpp
+
+CMakeFiles/AbstractVM.dir/ParserException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AbstractVM.dir/ParserException.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/developer/Desktop/abstractVM/ParserException.cpp > CMakeFiles/AbstractVM.dir/ParserException.cpp.i
+
+CMakeFiles/AbstractVM.dir/ParserException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AbstractVM.dir/ParserException.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/developer/Desktop/abstractVM/ParserException.cpp -o CMakeFiles/AbstractVM.dir/ParserException.cpp.s
+
+CMakeFiles/AbstractVM.dir/OperandException.cpp.o: CMakeFiles/AbstractVM.dir/flags.make
+CMakeFiles/AbstractVM.dir/OperandException.cpp.o: ../OperandException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AbstractVM.dir/OperandException.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AbstractVM.dir/OperandException.cpp.o -c /Users/developer/Desktop/abstractVM/OperandException.cpp
+
+CMakeFiles/AbstractVM.dir/OperandException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AbstractVM.dir/OperandException.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/developer/Desktop/abstractVM/OperandException.cpp > CMakeFiles/AbstractVM.dir/OperandException.cpp.i
+
+CMakeFiles/AbstractVM.dir/OperandException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AbstractVM.dir/OperandException.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/developer/Desktop/abstractVM/OperandException.cpp -o CMakeFiles/AbstractVM.dir/OperandException.cpp.s
+
 # Object files for target AbstractVM
 AbstractVM_OBJECTS = \
 "CMakeFiles/AbstractVM.dir/main.cpp.o" \
 "CMakeFiles/AbstractVM.dir/Lexer.cpp.o" \
 "CMakeFiles/AbstractVM.dir/MyException.cpp.o" \
 "CMakeFiles/AbstractVM.dir/Parser.cpp.o" \
-"CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o"
+"CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o" \
+"CMakeFiles/AbstractVM.dir/LexerException.cpp.o" \
+"CMakeFiles/AbstractVM.dir/ParserException.cpp.o" \
+"CMakeFiles/AbstractVM.dir/OperandException.cpp.o"
 
 # External object files for target AbstractVM
 AbstractVM_EXTERNAL_OBJECTS =
@@ -138,9 +180,12 @@ AbstractVM: CMakeFiles/AbstractVM.dir/Lexer.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/MyException.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/Parser.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o
+AbstractVM: CMakeFiles/AbstractVM.dir/LexerException.cpp.o
+AbstractVM: CMakeFiles/AbstractVM.dir/ParserException.cpp.o
+AbstractVM: CMakeFiles/AbstractVM.dir/OperandException.cpp.o
 AbstractVM: CMakeFiles/AbstractVM.dir/build.make
 AbstractVM: CMakeFiles/AbstractVM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable AbstractVM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable AbstractVM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AbstractVM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,14 +3,24 @@
 
 CMakeFiles/AbstractVM.dir/Lexer.cpp.o: ../Lexer.cpp
 CMakeFiles/AbstractVM.dir/Lexer.cpp.o: ../Lexer.h
+CMakeFiles/AbstractVM.dir/Lexer.cpp.o: ../LexerException.h
 CMakeFiles/AbstractVM.dir/Lexer.cpp.o: ../MyException.h
+
+CMakeFiles/AbstractVM.dir/LexerException.cpp.o: ../LexerException.cpp
+CMakeFiles/AbstractVM.dir/LexerException.cpp.o: ../LexerException.h
+CMakeFiles/AbstractVM.dir/LexerException.cpp.o: ../MyException.h
 
 CMakeFiles/AbstractVM.dir/MyException.cpp.o: ../MyException.cpp
 CMakeFiles/AbstractVM.dir/MyException.cpp.o: ../MyException.h
 
+CMakeFiles/AbstractVM.dir/OperandException.cpp.o: ../MyException.h
+CMakeFiles/AbstractVM.dir/OperandException.cpp.o: ../OperandException.cpp
+CMakeFiles/AbstractVM.dir/OperandException.cpp.o: ../OperandException.h
+
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../IOperand.h
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../MyException.h
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../Operand.h
+CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../OperandException.h
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../OperandFactory.cpp
 CMakeFiles/AbstractVM.dir/OperandFactory.cpp.o: ../OperandFactory.h
 
@@ -19,6 +29,11 @@ CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../MyException.h
 CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../OperandFactory.h
 CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../Parser.cpp
 CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../Parser.h
+CMakeFiles/AbstractVM.dir/Parser.cpp.o: ../ParserException.h
+
+CMakeFiles/AbstractVM.dir/ParserException.cpp.o: ../MyException.h
+CMakeFiles/AbstractVM.dir/ParserException.cpp.o: ../ParserException.cpp
+CMakeFiles/AbstractVM.dir/ParserException.cpp.o: ../ParserException.h
 
 CMakeFiles/AbstractVM.dir/main.cpp.o: ../IOperand.h
 CMakeFiles/AbstractVM.dir/main.cpp.o: ../Lexer.h

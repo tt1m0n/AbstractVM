@@ -150,6 +150,33 @@ Lexer.cpp.s:
 	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/Lexer.cpp.s
 .PHONY : Lexer.cpp.s
 
+LexerException.o: LexerException.cpp.o
+
+.PHONY : LexerException.o
+
+# target to build an object file
+LexerException.cpp.o:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/LexerException.cpp.o
+.PHONY : LexerException.cpp.o
+
+LexerException.i: LexerException.cpp.i
+
+.PHONY : LexerException.i
+
+# target to preprocess a source file
+LexerException.cpp.i:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/LexerException.cpp.i
+.PHONY : LexerException.cpp.i
+
+LexerException.s: LexerException.cpp.s
+
+.PHONY : LexerException.s
+
+# target to generate assembly for a file
+LexerException.cpp.s:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/LexerException.cpp.s
+.PHONY : LexerException.cpp.s
+
 MyException.o: MyException.cpp.o
 
 .PHONY : MyException.o
@@ -176,6 +203,33 @@ MyException.s: MyException.cpp.s
 MyException.cpp.s:
 	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/MyException.cpp.s
 .PHONY : MyException.cpp.s
+
+OperandException.o: OperandException.cpp.o
+
+.PHONY : OperandException.o
+
+# target to build an object file
+OperandException.cpp.o:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/OperandException.cpp.o
+.PHONY : OperandException.cpp.o
+
+OperandException.i: OperandException.cpp.i
+
+.PHONY : OperandException.i
+
+# target to preprocess a source file
+OperandException.cpp.i:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/OperandException.cpp.i
+.PHONY : OperandException.cpp.i
+
+OperandException.s: OperandException.cpp.s
+
+.PHONY : OperandException.s
+
+# target to generate assembly for a file
+OperandException.cpp.s:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/OperandException.cpp.s
+.PHONY : OperandException.cpp.s
 
 OperandFactory.o: OperandFactory.cpp.o
 
@@ -231,6 +285,33 @@ Parser.cpp.s:
 	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
+ParserException.o: ParserException.cpp.o
+
+.PHONY : ParserException.o
+
+# target to build an object file
+ParserException.cpp.o:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/ParserException.cpp.o
+.PHONY : ParserException.cpp.o
+
+ParserException.i: ParserException.cpp.i
+
+.PHONY : ParserException.i
+
+# target to preprocess a source file
+ParserException.cpp.i:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/ParserException.cpp.i
+.PHONY : ParserException.cpp.i
+
+ParserException.s: ParserException.cpp.s
+
+.PHONY : ParserException.s
+
+# target to generate assembly for a file
+ParserException.cpp.s:
+	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/ParserException.cpp.s
+.PHONY : ParserException.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -270,15 +351,24 @@ help:
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"
+	@echo "... LexerException.o"
+	@echo "... LexerException.i"
+	@echo "... LexerException.s"
 	@echo "... MyException.o"
 	@echo "... MyException.i"
 	@echo "... MyException.s"
+	@echo "... OperandException.o"
+	@echo "... OperandException.i"
+	@echo "... OperandException.s"
 	@echo "... OperandFactory.o"
 	@echo "... OperandFactory.i"
 	@echo "... OperandFactory.s"
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"
+	@echo "... ParserException.o"
+	@echo "... ParserException.i"
+	@echo "... ParserException.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

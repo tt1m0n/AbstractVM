@@ -1,8 +1,10 @@
 #include "Lexer.h"
-#include "MyException.h"
 #include <iostream>
 #include <fstream>
 #include <sys/stat.h>
+
+#include "MyException.h"
+#include "LexerException.h"
 
 static const int g_kOneArgument = 2;
 static const int g_kNoArguments = 1;
@@ -43,7 +45,7 @@ void Lexer::read()
 {
     if (m_argc > g_kOneArgument)
     {
-        throw MyException("Usage: ./asm | ./asm filename");
+        throw LexerException("Usage: ./asm | ./asm filename");
     }
 
     if (m_argc == g_kOneArgument)
@@ -55,7 +57,7 @@ void Lexer::read()
 
         if (S_ISDIR(st.st_mode))
         {
-            throw MyException("error: it is a directory");
+            throw LexerException("error: it is a directory");
         }
 
         std::ifstream file(m_argv[1]);
@@ -63,7 +65,7 @@ void Lexer::read()
 
         if (!file.is_open())
         {
-            throw MyException("error: can not open file");
+            throw LexerException("error: can not open file");
         }
 
         while(std::getline(file, line))
@@ -145,4 +147,28 @@ void Lexer::splitLine(const std::string &line)
     }
 
     m_tokenLines.emplace_back(tokenLine);
+}
+
+//Just for canonical form
+Lexer::Lexer()
+    : m_argc(0),
+    m_argv(nullptr),
+    m_isStandartInput(false)
+{
+};
+
+const Lexer& Lexer::operator=(const Lexer& lexer)
+{
+    this->m_argc = lexer.m_argc;
+    this->m_argv = lexer.m_argv;
+    this->m_isStandartInput = lexer.m_isStandartInput;
+    this->m_lines = lexer.m_lines;
+    this->m_tokenLines = lexer.m_tokenLines;
+
+    return *this;
+}
+
+Lexer::Lexer(const Lexer &lexer)
+{
+    *this = lexer;
 }

@@ -12,8 +12,8 @@ public:
     ~OperandFactory();
 
     //just for canonical form
-    OperandFactory(const OperandFactory &operandFactory);
-    const OperandFactory& operator=(const OperandFactory& lexer);
+    OperandFactory(const OperandFactory &factory);
+    const OperandFactory& operator=(const OperandFactory& factory);
 
     void initCreateCommands();
     IOperand const *createOperand(eOperandType type, std::string const &value) const;

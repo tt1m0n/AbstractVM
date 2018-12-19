@@ -32,3 +32,21 @@ std::string MyException::makeErrorString(int line, const std::string &argument)
     return error;
 }
 
+// just for Canonical form
+MyException::MyException()
+{
+}
+
+const MyException& MyException::operator=(const MyException &exception)
+{
+    if (this != &exception)
+    {
+        this->m_msg = exception.m_msg;
+    }
+
+    return *this;
+}
+MyException::MyException(const MyException &exception)
+{
+    *this = exception;
+}
