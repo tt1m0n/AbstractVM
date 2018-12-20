@@ -40,6 +40,13 @@ private:
     void printCommand(int line, const TokenLine &tokenLine);
     void exitCommand(int line, const TokenLine &tokenLine);
 
+    // bonus commands
+    void swapCommand(int line, const TokenLine &tokenLine);
+    void reverseCommand(int line, const TokenLine &tokenLine);
+    void clearCommand(int line, const TokenLine &tokenLine);
+    void moreCommand(int line, const TokenLine &tokenLine);
+    void lessCommand(int line, const TokenLine &tokenLine);
+
     void checkNumberOfTokens(int line,
             const TokenLine &tokenLine,
             bool isNeedValue);

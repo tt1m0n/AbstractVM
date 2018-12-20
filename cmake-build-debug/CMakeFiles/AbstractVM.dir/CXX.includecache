@@ -40,12 +40,6 @@ IOperand.h
 OperandFactory.h
 /Users/developer/Desktop/abstractVM/OperandFactory.h
 
-/Users/developer/Desktop/abstractVM/OperandException.cpp
-OperandException.h
-/Users/developer/Desktop/abstractVM/OperandException.h
-MyException.h
-/Users/developer/Desktop/abstractVM/MyException.h
-
 /Users/developer/Desktop/abstractVM/OperandException.h
 exception
 -
@@ -63,34 +57,4 @@ map
 -
 IOperand.h
 /Users/developer/Desktop/abstractVM/IOperand.h
-
-/Users/developer/Desktop/abstractVM/Parser.cpp
-iostream
--
-functional
--
-Parser.h
-/Users/developer/Desktop/abstractVM/Parser.h
-MyException.h
-/Users/developer/Desktop/abstractVM/MyException.h
-ParserException.h
-/Users/developer/Desktop/abstractVM/ParserException.h
-
-/Users/developer/Desktop/abstractVM/Parser.h
-vector
--
-map
--
-list
--
-IOperand.h
-/Users/developer/Desktop/abstractVM/IOperand.h
-OperandFactory.h
-/Users/developer/Desktop/abstractVM/OperandFactory.h
-
-/Users/developer/Desktop/abstractVM/ParserException.h
-exception
--
-string
--
 

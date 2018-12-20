@@ -350,6 +350,44 @@ public:
         return 0;
     }
 
+    bool operator>(const IOperand &rhs) const override
+    {
+        int precision = (m_precision >= rhs.getPrecision() ) ? m_precision : rhs.getPrecision();
+        eOperandType type = (m_type >= rhs.getType()) ? m_type : rhs.getType();
+
+        try
+        {
+            bool result = false;
+            std::stringstream stream(std::stringstream::out);
+            if (type < Float)
+            {
+                long long leftValue = std::stoll(m_str);
+                long long rightValue = std::stoll(rhs.toString());
+
+                result = (leftValue > rightValue);
+            }
+            else
+            {
+                long double leftValue = std::stold(m_str);
+                long double rightValue = std::stold(rhs.toString());
+
+                result = (leftValue > rightValue);
+            }
+
+            return result;
+        }
+        catch(const std::exception &ex)
+        {
+            std::cout << ex.what() << std::endl;
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    bool operator<(const IOperand &rhs) const override
+    {
+        return !(*this > rhs);
+    }
+
     // just for canonical form
     Operand()
         : m_value(0),

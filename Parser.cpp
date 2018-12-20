@@ -21,8 +21,11 @@ static const std::string g_kWrongAssertType = "use assert-command with different
 static const std::string g_kWrongAssertValue = "use assert-command with different value";
 static const std::string g_kWrongAdd = "use add-command with less then two values";
 static const std::string g_kWrongSub = "use sub-command with less then two values";
+static const std::string g_kWrongMore = "use more-command with less then two values";
+static const std::string g_kWrongLess = "use less-command with less then two values";
 static const std::string g_kWrongDiv = "use div-command with less then two values";
 static const std::string g_kWrongMod = "use mod-command with less then two values";
+static const std::string g_kWrongSwap = "use swap-command with less then two values";
 static const std::string g_kWrongMul = "use mul-command with less then two values";
 static const std::string g_kEmptyPrint = "use print-command with empty stack";
 static const std::string g_kWrongPrint = "use print-command with error type";
@@ -117,6 +120,13 @@ void Parser::initProcessCommands()
     m_processCommands["mod"] = &Parser::modCommand;
     m_processCommands["print"] = &Parser::printCommand;
     m_processCommands["exit"] = &Parser::exitCommand;
+
+    // bonuses
+    m_processCommands["swap"] = &Parser::swapCommand;
+    m_processCommands["reverse"] = &Parser::reverseCommand;
+    m_processCommands["clear"] = &Parser::clearCommand;
+    m_processCommands["more"] = &Parser::moreCommand;
+    m_processCommands["less"] = &Parser::lessCommand;
 }
 
 void Parser::initOperandsValue()
@@ -238,7 +248,6 @@ void Parser::addCommand(int line, const TokenLine &tokenLine)
         m_factory.setLine(line);
 
         std::unique_ptr<const IOperand> result(*secondValue + *firstValue);
-
         m_stack.push_front(std::move(result));
     }
 }
@@ -395,6 +404,132 @@ void Parser::exitCommand(int line, const TokenLine &tokenLine)
     if (m_isNeedToCheck)
     {
         checkNumberOfTokens(line, tokenLine, false);
+    }
+}
+
+// bonus commands
+
+void Parser::swapCommand(int line, const TokenLine &tokenLine)
+{
+    if (m_isNeedToCheck)
+    {
+        checkNumberOfTokens(line, tokenLine, false);
+    }
+    else
+    {
+        if (m_stack.size() < 2)
+        {
+            std::string error = MyException::makeErrorString(line, g_kWrongSwap);
+            throw ParserException(error);
+        }
+
+        // extract first value
+        std::unique_ptr<const IOperand> top(m_stack.front().release());
+        m_stack.pop_front();
+
+        // extract second value
+        std::unique_ptr<const IOperand> bottom(m_stack.front().release());
+        m_stack.pop_front();
+
+        // need for error output
+        m_factory.setLine(line);
+
+        m_stack.push_front(std::move(top));
+        m_stack.push_front(std::move(bottom));
+    }
+}
+
+void Parser::reverseCommand(int line, const TokenLine &tokenLine)
+{
+    if (m_isNeedToCheck)
+    {
+        checkNumberOfTokens(line, tokenLine, false);
+    }
+    else
+    {
+        if (m_stack.size() < 2)
+        {
+            std::string error = MyException::makeErrorString(line, g_kWrongSwap);
+            throw ParserException(error);
+        }
+
+        m_stack.reverse();
+    }
+}
+
+void Parser::clearCommand(int line, const TokenLine &tokenLine)
+{
+    if (m_isNeedToCheck)
+    {
+        checkNumberOfTokens(line, tokenLine, false);
+    }
+    else
+    {
+        m_stack.clear();
+    }
+}
+
+void Parser::moreCommand(int line, const TokenLine &tokenLine)
+{
+    if (m_isNeedToCheck)
+    {
+        checkNumberOfTokens(line, tokenLine, false);
+    }
+    else
+    {
+        if (m_stack.size() < 2)
+        {
+            std::string error = MyException::makeErrorString(line, g_kWrongMore);
+            ParserException MyException(error);
+        }
+
+        // extract first value
+        std::unique_ptr<const IOperand> firstValue(m_stack.front().release());
+        m_stack.pop_front();
+
+        // max
+        if (*m_stack.front() > *firstValue)
+        {
+            std::cout << m_stack.front()->toString() << std::endl;
+        }
+        else
+        {
+            std::cout << firstValue->toString() << std::endl;
+        }
+
+        m_stack.push_front(std::move(firstValue));
+    }
+}
+
+void Parser::lessCommand(int line, const TokenLine &tokenLine)
+{
+    if (m_isNeedToCheck)
+    {
+        checkNumberOfTokens(line, tokenLine, false);
+    }
+    else
+    {
+        if (m_stack.size() < 2)
+        {
+            std::string error = MyException::makeErrorString(line, g_kWrongLess);
+            ParserException MyException(error);
+        }
+
+        // extract first value
+        std::unique_ptr<const IOperand> firstValue(m_stack.front().release());
+        m_stack.pop_front();
+
+        // min
+        if (*m_stack.front() < *firstValue)
+        {
+            std::cout << m_stack.front()->toString() << std::endl;
+        }
+        else
+        {
+            std::cout << firstValue->toString() << std::endl;
+        }
+
+        m_stack.push_front(std::move(firstValue));
     }
 }
 

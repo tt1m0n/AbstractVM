@@ -1,5 +1,6 @@
-push int8(32)
-push double (32.2)
+push double(-332.2)
+push double(-332.1)
+less
 dump
-push float(33.3333)
 exit
+
