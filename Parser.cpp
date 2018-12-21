@@ -65,7 +65,7 @@ void Parser::run()
 
 void Parser::parse()
 {
-    for (int i = 0; i < m_tokenLines.size(); ++i)
+    for (size_t i = 0; i < m_tokenLines.size(); ++i)
     {
         try
         {

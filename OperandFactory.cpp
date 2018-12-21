@@ -54,6 +54,8 @@ IOperand const* OperandFactory::createDouble( std::string const & value ) const
     return (new Operand<double>(value, Double, 14, *this, m_line));
 }
 
+
+
 //just for canonical form
 const OperandFactory& OperandFactory::operator=(const OperandFactory& factory)
 {
@@ -61,6 +63,8 @@ const OperandFactory& OperandFactory::operator=(const OperandFactory& factory)
     {
         this->m_line = factory.m_line;
     }
+
+    return *this;
 }
 
 OperandFactory::OperandFactory(const OperandFactory &factory)

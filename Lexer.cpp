@@ -101,7 +101,7 @@ void Lexer::splitLine(const std::string &line)
     std::vector<std::string> tokenLine;
     std::string token;
 
-    for (int i = 0; i < line.length(); ++i)
+    for (size_t i = 0; i < line.length(); ++i)
     {
         if (line[i] == g_kSpaceSymbol && token.empty())
         {

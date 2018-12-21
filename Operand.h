@@ -352,7 +352,6 @@ public:
 
     bool operator>(const IOperand &rhs) const override
     {
-        int precision = (m_precision >= rhs.getPrecision() ) ? m_precision : rhs.getPrecision();
         eOperandType type = (m_type >= rhs.getType()) ? m_type : rhs.getType();
 
         try

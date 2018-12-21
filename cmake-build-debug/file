@@ -1,6 +1,2 @@
-push double(-332.2)
-push double(-332.1)
-less
-dump
+push int8(32)
 exit
-
