@@ -80,18 +80,6 @@ public:
         return m_type;
     }
 
-    std::string	removeTrailingZeros(std::string s) const
-    {
-        for(int i = s.length() - 1; i >= 0; i--)
-        {
-            if (s[i] == '0')
-                s.erase(s.end() - 1);
-            else
-                break;
-        }
-        return s;
-    }
-
     template <typename U>
     bool isErrorLimits(U r, eOperandType type) const
     {

@@ -59,10 +59,10 @@ RM = /Volumes/CLion/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/developer/Desktop/abstractVM
+CMAKE_SOURCE_DIR = /Users/developer/Desktop/avm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/developer/Desktop/abstractVM/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/developer/Desktop/avm/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/AbstractVM.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/developer/Desktop/abstractVM/cmake-build-debug
 CMakeFiles/AbstractVM.dir/all:
 	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/depend
 	$(MAKE) -f CMakeFiles/AbstractVM.dir/build.make CMakeFiles/AbstractVM.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target AbstractVM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/developer/Desktop/avm/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target AbstractVM"
 .PHONY : CMakeFiles/AbstractVM.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/AbstractVM.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AbstractVM.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/developer/Desktop/avm/cmake-build-debug/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AbstractVM.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/developer/Desktop/abstractVM/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/developer/Desktop/avm/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/AbstractVM.dir/rule
 
 # Convenience name for target.

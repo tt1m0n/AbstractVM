@@ -204,14 +204,14 @@ void Parser::assertCommand(int line, const TokenLine &tokenLine)
         if (m_stack.empty())
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAssertEmpty);
-            ParserException MyException(error);
+            throw ParserException(error);
         }
 
         eOperandType assertType = m_operands.at(tokenLine[g_kTypeNamePosition]);
         if (assertType != m_stack.front()->getType())
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAssertType);
-            ParserException MyException(error);
+            throw ParserException(error);
         }
 
         if (tokenLine[g_kValuePosition] != m_stack.front()->toString())
@@ -233,7 +233,7 @@ void Parser::addCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongAdd);
-            ParserException MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value
@@ -263,7 +263,7 @@ void Parser::subCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongSub);
-            ParserException MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value
@@ -480,7 +480,7 @@ void Parser::moreCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongMore);
-            ParserException MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value
@@ -512,7 +512,7 @@ void Parser::lessCommand(int line, const TokenLine &tokenLine)
         if (m_stack.size() < 2)
         {
             std::string error = MyException::makeErrorString(line, g_kWrongLess);
-            ParserException MyException(error);
+            throw ParserException(error);
         }
 
         // extract first value

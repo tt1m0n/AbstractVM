@@ -1,2 +1,2 @@
-push int8(32)
+assert int8(32)
 exit

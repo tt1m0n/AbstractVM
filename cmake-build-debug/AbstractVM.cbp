@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/developer/Desktop/abstractVM/cmake-build-debug"/>
+				<Option working_dir="/Users/developer/Desktop/avm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/developer/Desktop/abstractVM/cmake-build-debug"/>
+				<Option working_dir="/Users/developer/Desktop/avm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/developer/Desktop/abstractVM/cmake-build-debug"/>
+				<Option working_dir="/Users/developer/Desktop/avm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AbstractVM">
-				<Option output="/Users/developer/Desktop/abstractVM/cmake-build-debug/AbstractVM" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/developer/Desktop/abstractVM/cmake-build-debug"/>
+				<Option output="/Users/developer/Desktop/avm/cmake-build-debug/AbstractVM" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/developer/Desktop/avm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 AbstractVM"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 AbstractVM"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AbstractVM/fast">
-				<Option output="/Users/developer/Desktop/abstractVM/cmake-build-debug/AbstractVM" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/developer/Desktop/abstractVM/cmake-build-debug"/>
+				<Option output="/Users/developer/Desktop/avm/cmake-build-debug/AbstractVM" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/developer/Desktop/avm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,65 +75,65 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 AbstractVM/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/abstractVM/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 AbstractVM/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/Users/developer/Desktop/avm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/developer/Desktop/abstractVM/IOperand.h">
+		<Unit filename="/Users/developer/Desktop/avm/IOperand.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/Lexer.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/Lexer.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/Lexer.h">
+		<Unit filename="/Users/developer/Desktop/avm/Lexer.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/LexerException.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/LexerException.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/LexerException.h">
+		<Unit filename="/Users/developer/Desktop/avm/LexerException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/MyException.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/MyException.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/MyException.h">
+		<Unit filename="/Users/developer/Desktop/avm/MyException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/Operand.h">
+		<Unit filename="/Users/developer/Desktop/avm/Operand.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/OperandException.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/OperandException.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/OperandException.h">
+		<Unit filename="/Users/developer/Desktop/avm/OperandException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/OperandFactory.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/OperandFactory.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/OperandFactory.h">
+		<Unit filename="/Users/developer/Desktop/avm/OperandFactory.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/Parser.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/Parser.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/Parser.h">
+		<Unit filename="/Users/developer/Desktop/avm/Parser.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/ParserException.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/ParserException.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/ParserException.h">
+		<Unit filename="/Users/developer/Desktop/avm/ParserException.h">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/main.cpp">
+		<Unit filename="/Users/developer/Desktop/avm/main.cpp">
 			<Option target="AbstractVM"/>
 		</Unit>
-		<Unit filename="/Users/developer/Desktop/abstractVM/CMakeLists.txt">
+		<Unit filename="/Users/developer/Desktop/avm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
